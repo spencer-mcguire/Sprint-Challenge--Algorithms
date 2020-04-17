@@ -2,11 +2,11 @@
 
 ## Exercise I
 
-a) O(n) because it is linear
+a) O(n) because it is linear.
 
-b) O(n^2)
+b) O(n^2) becuase the operations are the square of the input size as such with nested loops.
 
-c) O(n) because it recursively moves towards the base case
+c) O(n) because it recursively moves towards the base case.
 
 ## Exercise II
 

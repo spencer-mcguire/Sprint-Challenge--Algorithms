@@ -109,10 +109,25 @@ class SortingRobot:
             while SortingRobot.can_move_right(self):
                 SortingRobot.move_right(self)
                 if SortingRobot.compare_item(self) == 1:
-
-                    # if item is > current item, he swaps the item
-
-        pass
+                 # if item is > current item, he swaps the item
+                    SortingRobot.swap_item(self)
+                    # set light back on
+                    SortingRobot.set_light_on(self)
+            # move back left to continue sorting
+            while SortingRobot.can_move_left(self):
+                # swap with the next item
+                SortingRobot.swap_item(self)
+                SortingRobot.move_left(self)
+                # if the value is less than swap and turn the light back on to coninue sorting
+                if SortingRobot.compare_item(self) == -1:
+                    SortingRobot.swap_item(self)
+                    SortingRobot.set_light_on(self)
+            # what do I do when we get back to the beginning? swap again?
+                # ELSE
+                # move to the right and swap the items, move back to the left and start again
+                SortingRobot.move_right(self)
+                SortingRobot.swap_item(self)
+                SortingRobot.move_left(self)
 
 
 if __name__ == "__main__":
